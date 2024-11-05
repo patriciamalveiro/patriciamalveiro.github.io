@@ -169,7 +169,7 @@ dt {
 }
 
 ul.side-nav {
-  width: 50%;
+  width: 35%;
 }
 
 ul.side-nav li {
@@ -184,9 +184,13 @@ ul.side-nav.fixed a {
   padding: 10px 0 12px;
 }
 
-ul.table-of-contents li.logo a.active, ul.table-of-contents li.logo a:hover {
+ul.table-of-contents a.active, ul.table-of-contents li.logo a:hover {
   border: none;
   font-weight: 200;
+}
+
+li.logo{
+  font-weight: 50%;
 }
 
 ul.side-nav.fixed li.logo {
