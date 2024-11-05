@@ -198,8 +198,6 @@ li.logo{
 }
 
 ul.side-nav.fixed li.logo {
-  background-color: #fafafa;
-  border-bottom: 1px solid #ddd;
   box-sizing: content-box;
   min-height: 90px;
   padding: 30px 30px 40px;
@@ -211,7 +209,6 @@ ul.side-nav.fixed li.logo a {
 }
 
 ul.table-of-contents li:not(.logo) a.active, ul.table-of-contents li:not(.logo) a:hover {
-  background-color: #fafafa;
   border-left: 3px solid;
 }
 
@@ -268,30 +265,6 @@ h3 {
 #script.section {
   background: #330048 repeat;
   position: relative;
-}
-
-#intro.section .container {
-  color: white;
-  font-weight: 200;
-  left: 0;
-  position: absolute;
-  top: 0;
-}
-
-#intro.section .container *:not(span) {
-  font-weight: 300;
-  /* font-weight: 400; */
-  line-height: 150%;
-  /* padding: 0 0px; */
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-}
-
-#intro.section .underline {
-  border-bottom: 5px solid #24305e;
-}
-
-#intro.section .teal {
-  padding: 0 10px;
 }
 
 .overlay {
@@ -407,58 +380,8 @@ a.hoverline {
 
 /* main a.hoverline */
 
-/* a.hoverline:hover {
-  border-bottom: 3px solid #24305e !important;
-} */
-
 a.hoverline:hover {
   border-bottom: 3px solid #004d40 !important;
-}
-
-#skills .card.large {
-  height: 360px;
-}
-
-#skills h4 {
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-}
-
-#skills .col img.responsive-img {
-  margin: 0 auto;
-  max-height: 100px;
-  padding-bottom: 10px;
-  text-align: center;
-  vertical-align: middle;
-  display: table-cell;
-}
-
-.card.large .card-content p {
-  color: inherit;
-  margin: 0;
-  padding: 30px 0;
-}
-
-#experience .card-content .row {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
-}
-
-.card.large .card-image {
-  height: 230px;
-}
-
-.card.large .card-content {
-  height: auto;
-}
-
-.card.medium .card-image {
-  height: 240px;
-}
-
-.card-action a.btn-floating {
-  margin-bottom: 0;
 }
 
 #contact a:not(.btn-floating) {
@@ -512,7 +435,6 @@ small {
     width: 100%;
   }
   nav {
-    background: #fff;
     height: 64px;
     position: absolute;
   }
