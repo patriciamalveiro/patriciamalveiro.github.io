@@ -140,7 +140,6 @@ blockquote * {
 /* main nav */
 
 nav {
-  background: white;
   box-shadow: none;
   height: 0;
 }
@@ -170,6 +169,11 @@ dt {
 
 ul.side-nav {
   width: 35%;
+}
+
+/* Main content styling */
+main {
+  width: 65%; /* This takes up the remaining space */
 }
 
 ul.side-nav li {
@@ -228,7 +232,7 @@ li.logo span {
 }
 
 .container {
-  width: 95%;
+  display: flex;
 }
 
 h3 {
