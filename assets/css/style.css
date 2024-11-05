@@ -58,6 +58,10 @@
   color: #0077b5;
 }
 
+.email {
+  color: #01d4d4;
+}
+
 .angellist {
   color: grey;
 }
@@ -318,9 +322,20 @@ h3 {
   background: url(../../assets/img/white-ai-wallpaper.jpg) no-repeat top center/cover;
   position: relative;
 } */
-
-#intro.section {
-  background: #a7ffeb repeat;
+#about.section {
+  background: #735472 repeat;
+  position: relative;
+}
+#illustration.section{
+  background: #5E0000 repeat;
+  position: relative;
+}
+#video.section {
+  background: #230318 repeat;
+  position: relative;
+}
+#script.section {
+  background: #330048 repeat;
   position: relative;
 }
 
