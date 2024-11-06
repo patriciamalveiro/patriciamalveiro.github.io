@@ -1,0 +1,242 @@
+/* Ensure that the body and html stretch to 100% height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #735472;
+  }
+  /* Basic Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Set the overall background color of the page */
+  body {
+    
+    color: white; /* Set text color to white to make it stand out */
+    font-family: 'Futura PT', sans-serif;
+  }
+
+  /* Side Navigation - Fixed to the left, 35% width */
+  ul.side-nav {
+  width: 35%;
+  background-color: #735472;
+  padding-top: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto;
+  }
+
+  /* Add margin-left to the individual list items to move them to the right */
+  ul.side-nav li {
+    text-align: center;
+  }
+
+  ul.side-nav li .img-container {
+    width: 100%;   /* Make sure container takes full width of side-nav */
+    height: auto;  /* Maintain aspect ratio */
+    padding: 0;
+    margin: 0;
+  }    
+
+  ul.side-nav li .img-container a img{
+    transition: transform 0.3s ease; /* Ensure smooth transition both on hover and unhover */
+    display: block;
+    margin-left: 70px; /* Moves only the links */
+  }
+
+  ul.side-nav li img {
+      width: 68%;        /* or any fixed width you desire */
+      height: auto;      /* Maintain aspect ratio */
+      margin-bottom: 20px; /* Add bottom margin if needed */
+  }
+
+  /* Zoom image slightly on hover */
+  ul.side-nav li.logo .img-container a img:hover {
+      transform: scale(1.035);
+  }
+
+  .img-container img {
+      width: 100%; /* Make the images responsive */
+      height: auto;
+  }
+
+
+  .side-nav a {
+    display: block;
+    text-decoration: none;
+  }
+
+  /* Default styling for all links */
+  ul.side-nav li.bold a{
+    color: #bbb;
+    margin-left: 170px; /* Moves only the links */
+    text-decoration: none;
+    padding-top: 10px;
+    display: inline-block;
+    transition: color 0.3s; /* Smooth color transition */
+  }
+
+  ul.side-nav li.work a, ul.side-nav li.active a{
+    color: white;
+    margin-left: 170px; /* Moves only the links */
+    text-decoration: none;
+    padding-top: 10px;
+    display: inline-block;
+    transition: color 0.3s; /* Smooth color transition */
+  }
+
+  /* Default styling for all links */
+  ul.side-nav li.logo a {
+    color: #bbb;
+    margin-left: 220px; /* Moves only the links */
+    text-decoration: none;
+    padding-top: 10px;
+    display: block;
+    transition: color 0.3s; /* Smooth color transition */
+  }
+
+  /* Zoom image slightly on hover */
+  ul.side-nav li.logo .img-container :hover {
+    transform: scale(1.02);
+  }
+
+  /* Styling for links when hovered */
+  ul.side-nav li a:hover {
+    color: white; /* Change color to white on hover */
+  }
+
+  /* Styling for links when hovered */
+  ul.side-nav li.active a:hover, ul.side-nav li.work a:hover {
+    color: #bbb; /* Change color to white on hover */
+  }
+
+  /* Adjust the main content to account for the side-nav width */
+  main#main {
+    margin-left: 35%; /* Starts where the side-nav ends */
+    padding-top: 50px;
+    margin-right: 15%;
+    background-color: #735472;
+    height: 100vh; /* Ensure the main content takes up the full height of the viewport */
+  }
+
+  /* Container for Flexbox layout */
+  main.container {
+    height: 50%;
+    width: 50%;
+  }
+
+  /* Additional styling for text and layout */
+  .page-title {
+    font-size: 3.5rem;
+    color: white;
+    text-align: center;
+    /*font-weight: bold;*/
+  }
+  
+  p{
+    color: white;
+    font-size: 1.2rem;
+    width: 80%; /* Reduces width by 20% */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .social {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .social .icon-btn {
+    margin: 10px;
+    background-color: #816580;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .social .icon-btn:hover {
+    background-color: #9C869B;
+  }
+
+  .about_img{
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  /* Main grid container styles */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  .grid-item {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Image styling */
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  /* Ensure links fill the entire grid item */
+  .grid-item a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color for overlay */
+  }
+
+
+
+  @font-face {
+    font-family: 'Futura PT';
+    src: url('/assets/fonts/FuturaCyrillicBook.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /* Hide sidebar by default on mobile and make it slide in */
+  @media (max-width: 768px) {
+    .side-nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background-color: #735472;
+      z-index: 1000;
+      overflow-y: auto;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+
+    .side-nav.active {
+      display: block;
+      transform: translateX(0); /* Slide in sidebar */
+    }
+
+    /* Adjust the main content for mobile */
+    main#main {
+      margin-left: 0;
+      }
+  }
