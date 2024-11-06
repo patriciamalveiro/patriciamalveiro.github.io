@@ -36,6 +36,7 @@
     .container {
       display: flex;
       min-height: 100vh;
+      overflow: hidden;
     }
 
     /* Side Navigation - Fixed to the left, 35% width */
@@ -101,6 +102,7 @@
       padding: 20px;
       padding-top: 90px;
       background-color: #735472;
+      height: 100vh; /* Ensures the grid takes up the full viewport height */
     }
 
     /* Additional styling for text and layout */
@@ -144,17 +146,134 @@
       text-align: justify;
     }
 
+    /* Main grid container styles */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 10px;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .grid-item {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Image styling */
+    .grid-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    /* Zoom image slightly on hover */
+    .grid-item:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Ensure links fill the entire grid item */
+    .grid-item a {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-decoration: none; /* Remove underline from links */
+      color: inherit; /* Inherit text color for overlay */
+    }
+
+    /* Description overlay */
+    .description {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      font-size: 1.2rem;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    /* Show description on hover */
+    .grid-item:hover .description {
+      opacity: 1;
+    }
+
     @font-face {
       font-family: 'Futura PT';
       src: url('/assets/fonts/FuturaCyrillicBook.ttf') format('truetype');
       font-weight: normal;
       font-style: normal;
     }
+
+    /* Hide sidebar by default on mobile and make it slide in */
+    @media (max-width: 768px) {
+      .side-nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        background-color: #735472;
+        z-index: 1000;
+        overflow-y: auto;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+      }
+
+      .side-nav.active {
+        display: block;
+        transform: translateX(0); /* Slide in sidebar */
+      }
+
+      /* Adjust the main content for mobile */
+      main#main {
+        margin-left: 0;
+        }
+    }
+
+    /* Hamburger menu icon for mobile */
+    .menu-icon {
+      display: none;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1001;
+    }
+
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block; /* Show menu icon on mobile */
+      }
+    }
+    .about_img img,
+    .img-container img {
+      width: 100%; /* Make the images responsive */
+      height: auto;
+    }
   </style>
 </head>
 
 <body>
-
+  <div class="menu-icon">
+    <i class="fas fa-bars"></i> <!-- Hamburger icon from Font Awesome -->
+  </div>
   <div class="container">
 
     <!-- Side Navigation -->
@@ -171,7 +290,7 @@
       </li>
 
       <li class="bold">
-        <a aria-label="Navigate to the About section" href="about.html" style="color: white">About</a>
+        <a aria-label="Navigate to the About section" href="about.html">About</a>
       </li>
       <li class="bold">
         <a aria-label="Navigate to the Illustration & Animation section" href="illustration.html">Illustration & Animation</a>
@@ -192,30 +311,30 @@
 
     <!-- Main Content -->
     <main id="main">
-      <div id="about" class="full-height">
-        <h3 class="page-title">ABOUT</h3>
-        <p>Born in Lisbon, creating from both sides of the Tagus River, my future became clearer as I doodled away while watching movies in the background. My love for the arts made me pursue my Bachelor's Degree in Film for its versatility and combined attributes, virtues, and efforts.</p>
-
-        <div class="social">
-          <a href="https://www.linkedin.com/in/patriciamalveiro/" target="_blank">
-            <button class="icon-btn linkedin">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </button>
-          </a>
-          <a href="https://www.instagram.com/patricia.malveiro/" target="_blank">
-            <button class="icon-btn instagram">
-              <i class="fa-brands fa-instagram"></i>
-            </button>
-          </a>
-          <a href="mailto:patricia.malveiro@outlook.com" target="_blank">
-            <button class="icon-btn email">
-              <i class="fa-solid fa-envelope"></i>
-            </button>
+      <div class="grid-container">
+        <div class="grid-item">
+          <a href="about.html">
+            <img src="assets/img/about_me_img.png">
+            <div class="description">About me</div>
           </a>
         </div>
-        <div class="about_img">
-          <!-- Replaced buttons with image (you can replace the image path) -->
-          <img src="/assets/img/about_me_img.png" style="width: 100%; height: 100%" alt="About Image">
+        <div class="grid-item">
+          <a href="illustration.html">
+            <img src="assets/img/illustration.jpg" alt="Description of Image 2">
+            <div class="description">Illustration & Animation</div>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="video.html">
+            <img src="assets/img/video.png" alt="Description of Image 3">
+            <div class="description">Video Editing & Art Direction</div>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="scripts.html">
+            <img src="assets/img/script-thumb.jpeg" alt="Description of Image 4">
+            <div class="description">Script(Writing)</div>
+          </a>
         </div>
       </div>
     </main>
@@ -255,6 +374,29 @@
         link.closest('li').removeClass('active'); // Remove 'active' class from others
       }
     });
+  });
+
+  $(document).ready(function () {
+  // Toggle the sidebar when the hamburger icon is clicked
+  $('.menu-icon').click(function () {
+    $('.side-nav').toggleClass('active');
+  });
+
+  // Code to highlight the active link based on URL hash
+  function updateActiveNav() {
+    var currentPage = window.location.hash;
+    $('ul.side-nav li a').each(function () {
+      var link = $(this);
+      if (link.attr('href') === currentPage) {
+        link.closest('li').addClass('active');
+      } else {
+        link.closest('li').removeClass('active');
+      }
+    });
+  }
+
+  updateActiveNav();
+  $(window).on('hashchange', updateActiveNav);
   });
 </script>
 </html>
