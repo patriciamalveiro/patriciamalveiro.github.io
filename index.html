@@ -1,106 +1,259 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   <!-- Materialize - Compiled and minified CSS-->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
   <!-- Font Awesome Icon - CSS-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
   <!-- Custom Styles-->
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <!--<link rel="stylesheet" href="/assets/css/style.css" /> -->
+
   <title>Patricia Malveiro | Video Editing and Art Animation</title>
+
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Set the overall background color of the page */
+    body {
+      background-color: #735472; /* Set the background color of the whole page */
+      color: white; /* Set text color to white to make it stand out */
+      font-family: 'Futura PT', sans-serif;
+    }
+
+    /* Container for Flexbox layout */
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Side Navigation - Fixed to the left, 35% width */
+    ul.side-nav {
+      width: 35%;
+      background-color: #735472; /* Light grey background */
+      padding-top: 5px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    /* Add margin-left to the individual list items to move them to the right */
+    ul.side-nav li {
+      text-align: center;
+    }
+
+    ul.side-nav li.img-container img {
+      margin-left: 220px; /* Moves only the images */
+    }
+
+    .side-nav a {
+      display: block;
+      text-decoration: none;
+    }
+
+    /* Default styling for all links */
+    ul.side-nav li.bold a {
+      color: #bbb;
+      margin-left: 170px; /* Moves only the links */
+      text-decoration: none;
+      padding-top: 10px;
+      display: block;
+      transition: color 0.3s; /* Smooth color transition */
+    }
+
+    /* Default styling for all links */
+    ul.side-nav li.logo a {
+      color: #bbb;
+      margin-left: 220px; /* Moves only the links */
+      text-decoration: none;
+      padding-top: 10px;
+      display: block;
+      transition: color 0.3s; /* Smooth color transition */
+    }
+
+    /* Styling for the active (selected) link */
+    ul.side-nav li.active a {
+      color: white; /* Highlight the active link with white text */
+    }
+
+    /* Styling for links when hovered */
+    ul.side-nav li a:hover {
+      color: white; /* Change color to white on hover */
+    }
+
+    /* Main content - Takes up remaining 65% */
+    main#main {
+      flex-grow: 1;
+      margin-left: 35%; /* Ensure the main content starts where the side nav ends */
+      padding: 20px;
+      padding-top: 90px;
+      background-color: #735472;
+    }
+
+    /* Additional styling for text and layout */
+    .page-title {
+      font-size: 3.5rem;
+      color: white;
+      text-align: center;
+      /*font-weight: bold;*/
+    }
+    
+    p{
+      color: white;
+      font-size: 1.2rem;
+      width: 80%; /* Reduces width by 20% */
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .social {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .social .icon-btn {
+      margin: 10px;
+      background-color: #816580;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .social .icon-btn:hover {
+      background-color: #9C869B;
+    }
+
+    .about_img{
+      margin-top: 10px;
+      text-align: justify;
+    }
+
+    @font-face {
+      font-family: 'Futura PT';
+      src: url('/assets/fonts/FuturaCyrillicBook.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
 </head>
 
 <body>
-  
-  <div class="container" style="background: #735472 repeat;">
 
-    <ul class="side-nav fixed table-of-contents">
+  <div class="container">
 
+    <!-- Side Navigation -->
+    <ul class="side-nav">
       <li class="logo">
-        <img src="/assets/img/profile_img.png" class="img-responsive profile-pic" alt="avatar">
+        <div class="img-container">
+          <a href="index.html">
+            <img src="/assets/img/profile_img.png" class="img-responsive profile-pic" alt="avatar" style="width: 68%; height: 68%; margin-bottom: 20px;">
+          </a>
+        </div>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Main section" href="index.html" style="font-size: 1rem; font-weight: bold; padding-bottom: 10px;">WORK</a>
       </li>
 
       <li class="bold">
-        <a aria-label="Navigate to the About section" href="index.html" class="waves-effect waves-dark teal-text"><span style="text-align: center;">About</span></a>
+        <a aria-label="Navigate to the About section" href="about.html">About</a>
       </li>
       <li class="bold">
-        <a aria-label="Navigate to the Illustration & Animation section" href="#illustration&animation"
-          class="waves-effect waves-dark teal-text"><span style="text-align: center;">Illustration & Animation</span></a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Video Editing and Art Direction section" href="#videoediting&artdirection" class="waves-effect waves-dark teal-text"><span style="text-align: center;">Video Editing and Art Direction</span></a>
+        <a aria-label="Navigate to the Illustration & Animation section" href="illustration.html">Illustration & Animation</a>
       </li>
 
       <li class="bold">
-        <a aria-label="Navigate to the Contacts section" href="contacts.html" class="waves-effect waves-dark teal-text"><i
-            class="waves-effect waves-dark teal-text"></i><span style="text-align: center;">Contacts</span></a>
+        <a aria-label="Navigate to the Video Editing and Art Direction section" href="video.html">Video Editing and Art Direction</a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to the Video Editing and Art Direction section" href="scripts.html">Script(Writing)</a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to the Contacts section" href="contacts.html" style="padding-top: 50px;">Contact</a>
       </li>
     </ul>
 
-    <!-- Main Content-->
+    <!-- Main Content -->
     <main id="main">
-      <!-- First Section: Heading lines and image -->
       <div id="about" class="full-height">
-        <div class="container">
-          <div class="col-md-9">
-            <h3 class="page-title white-text">About</h3>
-            <div class="container flow-text">      
-              <p style="color: white;">
-                Born in Lisbon, creating from both sides of the Tagus River, my future became clearer as I doodled away while watching movies in the background. My love for the arts made me pursue my Bachelor's Degree in Film for it's versatility and combined atributes, virtues and efforts.
-              </p>
-            </div>
-            <div class="content section-padding valign" style="margin-left: 10%; margin-top: 50px;">
-              <div class="social">
-                <a href="https://www.linkedin.com/in/patriciamalveiro/" target="_blank">
-                  <button class="icon-btn linkedin">
-                    <i class="fa fa-linkedin"></i>
-                  </button>
-                </a>
-                <a href="https://www.instagram.com/patricia.malveiro/" target="_blank">
-                  <button class="icon-btn instagram">
-                    <i class="fa fa-instagram"></i>
-                  </button>
-                </a>
-                <a href="mailto:patricia.malveiro@outlook.com" target="_blank">
-                  <button class="icon-btn email">
-                    <i class="fa fa-envelope"></i>
-                  </button>
-                </a>
-              </div>
-              <div class='buttons'>
-                <a href="#about" class="readme">Read More</a>
-                <a href="#contact" class="contactme">Contact Me</a>
-              </div>
-            </div>
-          </div>
+        <h3 class="page-title">ABOUT</h3>
+        <p>Born in Lisbon, creating from both sides of the Tagus River, my future became clearer as I doodled away while watching movies in the background. My love for the arts made me pursue my Bachelor's Degree in Film for its versatility and combined attributes, virtues, and efforts.</p>
+
+        <div class="social">
+          <a href="https://www.linkedin.com/in/patriciamalveiro/" target="_blank">
+            <button class="icon-btn linkedin">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </button>
+          </a>
+          <a href="https://www.instagram.com/patricia.malveiro/" target="_blank">
+            <button class="icon-btn instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </button>
+          </a>
+          <a href="mailto:patricia.malveiro@outlook.com" target="_blank">
+            <button class="icon-btn email">
+              <i class="fa-solid fa-envelope"></i>
+            </button>
+          </a>
         </div>
-      </section>
+        <div class="about_img">
+          <!-- Replaced buttons with image (you can replace the image path) -->
+          <img src="/assets/img/about_me_img.png" style="width: 100%; height: 100%" alt="About Image">
+        </div>
+      </div>
     </main>
+
   </div>
 
   <!-- jQuery-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
   <!-- Materialize - Compiled and minified JavaScript-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
     // Materialize - Initializers
     $(document).ready(function () {
-      $(".scrollspy").scrollSpy()
-      // Initialize collapse button
+      $(".scrollspy").scrollSpy();
       $(".button-collapse").sideNav({
-        menuWidth: 190, // Default is 240
-        edge: "left", // Choose the horizontal origin
-        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      })
-    })
+        menuWidth: 190,
+        edge: "left",
+        closeOnClick: true
+      });
+    });
   </script>
-</body>
 
+</body>
+<script>
+  $(document).ready(function () {
+    // Get the current page or URL hash
+    var currentPage = window.location.hash; // For example: #about, #videoediting&artdirection, etc.
+
+    // Find the corresponding <li> element and add the 'active' class to it
+    $('ul.side-nav li a').each(function () {
+      var link = $(this);
+      if (link.attr('href') === currentPage) {
+        link.closest('li').addClass('active'); // Add the 'active' class to the <li>
+      } else {
+        link.closest('li').removeClass('active'); // Remove 'active' class from others
+      }
+    });
+  });
+</script>
 </html>
