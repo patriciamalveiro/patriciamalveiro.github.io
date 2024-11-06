@@ -167,7 +167,7 @@
         </div>
       </li>
       <li class="bold">
-        <a aria-label="Navigate to the Main section" href="index.html" style="font-size: 1rem; font-weight: bold; padding-bottom: 10px;">WORK</a>
+        <a aria-label="Navigate to the Main section" href="index.html" style="font-size: 1rem; font-weight: bold; padding-bottom: 10px; color: white;">WORK</a>
       </li>
 
       <li class="bold">
@@ -244,6 +244,7 @@
   $(document).ready(function () {
     // Get the current page or URL hash
     var currentPage = window.location.hash; // For example: #about, #videoediting&artdirection, etc.
+    console.log("hello: "+currentPage);
 
     // Find the corresponding <li> element and add the 'active' class to it
     $('ul.side-nav li a').each(function () {
