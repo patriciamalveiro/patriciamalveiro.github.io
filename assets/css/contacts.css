@@ -149,7 +149,7 @@ html, body {
   }
 
   input{
-    color: white;
+    color: black;
   }
 
   input::placeholder, textarea::placeholder {
