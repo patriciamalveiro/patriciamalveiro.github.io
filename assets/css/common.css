@@ -1,0 +1,143 @@
+/* Reset and Basic Styling */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    color: white;
+    font-family: 'Futura PT', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Flex Container for Layout */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Basic Structure */
+ul.side-nav {
+    width: 35%;
+    padding-top: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+ul.side-nav li {
+    text-align: center;
+}
+
+/* Shared link styles */
+.side-nav a {
+    display: block;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+ul.side-nav li a {
+    padding-top: 10px;
+    display: inline-block;
+}
+
+ul.side-nav li.logo a img {
+    transition: transform 0.3s;
+}
+
+ul.side-nav li.logo a img:hover {
+    transform: scale(1.035);
+}
+
+/* Sidebar Image */
+ul.side-nav li img {
+    width: 68%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Main content basic styling */
+main#main {
+    margin-left: 35%;
+    padding-top: 50px;
+    min-height: 100vh;
+}
+
+.page-title {
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2rem;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about_img {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.grid-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .side-nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        z-index: 1000;
+        overflow-y: auto;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .side-nav.active {
+        display: block;
+        transform: translateX(0);
+    }
+
+    main#main {
+        margin-left: 0;
+    }
+}
+
+/* Custom Font */
+@font-face {
+    font-family: 'Futura PT';
+    src: url('/assets/fonts/FuturaCyrillicBook.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

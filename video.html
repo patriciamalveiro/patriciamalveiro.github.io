@@ -16,200 +16,10 @@
   <!--<link rel="stylesheet" href="/assets/css/style.css" /> -->
 
   <title>Patricia Malveiro | Video Editing and Art Animation</title>
-
-  <style>
-    /* Basic Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Set the overall background color of the page */
-    body {
-      background-color: #735472; /* Set the background color of the whole page */
-      color: white; /* Set text color to white to make it stand out */
-      font-family: 'Futura PT', sans-serif;
-    }
-
-    /* Container for Flexbox layout */
-    .container {
-      display: flex;
-      min-height: 100vh;
-      overflow: hidden;
-    }
-
-    /* Side Navigation - Fixed to the left, 35% width */
-    ul.side-nav {
-      width: 35%;
-      background-color: #735472; /* Light grey background */
-      padding-top: 5px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      overflow-y: auto;
-    }
-
-    /* Add margin-left to the individual list items to move them to the right */
-    ul.side-nav li {
-      text-align: center;
-    }
-
-    ul.side-nav li.img-container img {
-      margin-left: 220px; /* Moves only the images */
-    }
-
-    .side-nav a {
-      display: block;
-      text-decoration: none;
-    }
-
-    /* Default styling for all links */
-    ul.side-nav li.bold a {
-      color: #bbb;
-      margin-left: 170px; /* Moves only the links */
-      text-decoration: none;
-      padding-top: 10px;
-      display: block;
-      transition: color 0.3s; /* Smooth color transition */
-    }
-
-    /* Default styling for all links */
-    ul.side-nav li.logo a {
-      color: #bbb;
-      margin-left: 220px; /* Moves only the links */
-      text-decoration: none;
-      padding-top: 10px;
-      display: block;
-      transition: color 0.3s; /* Smooth color transition */
-    }
-
-    /* Styling for the active (selected) link */
-    ul.side-nav li.active a {
-      color: white; /* Highlight the active link with white text */
-    }
-
-    /* Styling for links when hovered */
-    ul.side-nav li a:hover {
-      color: white; /* Change color to white on hover */
-    }
-
-    /* Main content - Takes up remaining 65% */
-    main#main {
-      flex-grow: 1;
-      margin-left: 35%; /* Ensure the main content starts where the side nav ends */
-      padding: 20px;
-      padding-top: 90px;
-      background-color: #735472;
-    }
-
-    /* Additional styling for text and layout */
-    .page-title {
-      font-size: 3.5rem;
-      color: white;
-      text-align: center;
-      /*font-weight: bold;*/
-    }
-    
-    p{
-      color: white;
-      font-size: 1.2rem;
-      width: 80%; /* Reduces width by 20% */
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
-
-    .social {
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    .social .icon-btn {
-      margin: 10px;
-      background-color: #816580;
-      color: white;
-      border: none;
-      padding: 10px;
-      border-radius: 50%;
-      cursor: pointer;
-    }
-
-    .social .icon-btn:hover {
-      background-color: #9C869B;
-    }
-
-    .about_img{
-      margin-top: 10px;
-      text-align: justify;
-    }
-
-    @font-face {
-      font-family: 'Futura PT';
-      src: url('/assets/fonts/FuturaCyrillicBook.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    /* Hide sidebar by default on mobile and make it slide in */
-    @media (max-width: 768px) {
-      .side-nav {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 250px;
-        height: 100%;
-        background-color: #735472;
-        z-index: 1000;
-        overflow-y: auto;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-      }
-
-      .side-nav.active {
-        display: block;
-        transform: translateX(0); /* Slide in sidebar */
-      }
-
-      /* Adjust the main content for mobile */
-      main#main {
-        margin-left: 0;
-        }
-    }
-
-    /* Hamburger menu icon for mobile */
-    .menu-icon {
-      display: none;
-      font-size: 24px;
-      color: white;
-      cursor: pointer;
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      z-index: 1001;
-    }
-
-    @media (max-width: 768px) {
-      .menu-icon {
-        display: block; /* Show menu icon on mobile */
-      }
-    }
-    .about_img img,
-    .img-container img {
-      width: 100%; /* Make the images responsive */
-      height: auto;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/css/video.css"/>
 </head>
 
 <body>
-  <div class="menu-icon">
-    <i class="fas fa-bars"></i> <!-- Hamburger icon from Font Awesome -->
-  </div>
-  <div class="container">
-
     <!-- Side Navigation -->
     <ul class="side-nav">
       <li class="logo">
@@ -220,17 +30,17 @@
         </div>
       </li>
       <li class="bold">
-        <a aria-label="Navigate to the Main section" href="index.html" style="font-size: 1rem; font-weight: bold; padding-bottom: 10px; color: white;">WORK</a>
+        <a aria-label="Navigate to the Main section" href="index.html" style="font-size: 1rem; font-weight: bold; padding-bottom: 10px;">PATRICIA MALVEIRO's<br>PORTFOLIO</a>
       </li>
 
       <li class="bold">
-        <a aria-label="Navigate to the About section" href="about.html" style="color: white">About</a>
+        <a aria-label="Navigate to the About section" href="about.html" >About</a>
       </li>
       <li class="bold">
         <a aria-label="Navigate to the Illustration & Animation section" href="illustration.html">Illustration & Animation</a>
       </li>
 
-      <li class="bold">
+      <li class="active">
         <a aria-label="Navigate to the Video Editing and Art Direction section" href="video.html">Video Editing and Art Direction</a>
       </li>
 
@@ -245,35 +55,38 @@
 
     <!-- Main Content -->
     <main id="main">
-      <div id="about" class="full-height">
-        <h3 class="page-title">ABOUT</h3>
-        <p>Born in Lisbon, creating from both sides of the Tagus River, my future became clearer as I doodled away while watching movies in the background. My love for the arts made me pursue my Bachelor's Degree in Film for its versatility and combined attributes, virtues, and efforts.</p>
-
-        <div class="social">
-          <a href="https://www.linkedin.com/in/patriciamalveiro/" target="_blank">
-            <button class="icon-btn linkedin">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </button>
-          </a>
-          <a href="https://www.instagram.com/patricia.malveiro/" target="_blank">
-            <button class="icon-btn instagram">
-              <i class="fa-brands fa-instagram"></i>
-            </button>
-          </a>
-          <a href="mailto:patricia.malveiro@outlook.com" target="_blank">
-            <button class="icon-btn email">
-              <i class="fa-solid fa-envelope"></i>
-            </button>
-          </a>
+        <h3 class="page-title">VIDEO EDITING & ART DIRECTION</h3>
+        <p>From experimental to archival. I'm no actress, so I'd rather have the scenery speak for itself. Editing is just a way of rewriting the script.</p>
+        <div class="grid-container">
+            <div class="grid-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/E_r3krQjPO4?si=VvVxPOdUZPMZq0lX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p style="color: #bbb; margin-top: 5px; font-size: 15px;">"Heavy Metal Heart" (2023)<br>
+                    An Experimental Short Film
+                    <br><br>
+                    By Patricia Malveiro
+                    <br><br><br>
+                </p>
+            </div>
+            <div class="grid-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ve1EpLbHOAk?si=273hS8u15lu-DRpD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p style="color: #bbb; margin-top: 5px; font-size: 15px;">"(Prosop)agnosia" (2022)<br>
+                    A Notebook Short Film
+                    <br><br>
+                    By Patricia Malveiro
+                    <br><br><br>
+                </p>
+            </div>
+            <div class="grid-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-24stYHT2cA?si=YaZzDykX8CQo57KW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p style="color: #bbb; margin-top: 5px; font-size: 15px;">"Ubuntu" (2022)<br>
+                    Teaser for Glass Exposition made with documental footage.
+                    <br><br>
+                    Edited by Patricia Malveiro
+                    <br><br><br>
+                </p>
+            </div>
         </div>
-        <div class="about_img">
-          <!-- Replaced buttons with image (you can replace the image path) -->
-          <img src="/assets/img/about_me_img.png" style="width: 100%; height: 100%" alt="About Image">
-        </div>
-      </div>
     </main>
-
-  </div>
 
   <!-- jQuery-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -293,44 +106,4 @@
   </script>
 
 </body>
-<script>
-  $(document).ready(function () {
-    // Get the current page or URL hash
-    var currentPage = window.location.hash; // For example: #about, #videoediting&artdirection, etc.
-    console.log("hello: "+currentPage);
-
-    // Find the corresponding <li> element and add the 'active' class to it
-    $('ul.side-nav li a').each(function () {
-      var link = $(this);
-      if (link.attr('href') === currentPage) {
-        link.closest('li').addClass('active'); // Add the 'active' class to the <li>
-      } else {
-        link.closest('li').removeClass('active'); // Remove 'active' class from others
-      }
-    });
-  });
-
-  $(document).ready(function () {
-  // Toggle the sidebar when the hamburger icon is clicked
-  $('.menu-icon').click(function () {
-    $('.side-nav').toggleClass('active');
-  });
-
-  // Code to highlight the active link based on URL hash
-  function updateActiveNav() {
-    var currentPage = window.location.hash;
-    $('ul.side-nav li a').each(function () {
-      var link = $(this);
-      if (link.attr('href') === currentPage) {
-        link.closest('li').addClass('active');
-      } else {
-        link.closest('li').removeClass('active');
-      }
-    });
-  }
-
-  updateActiveNav();
-  $(window).on('hashchange', updateActiveNav);
-  });
-</script>
 </html>

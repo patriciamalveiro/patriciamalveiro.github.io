@@ -86,7 +86,7 @@
         display: inline-block;
         transition: color 0.3s; /* Smooth color transition */
       }
-      ul.side-nav li.work a{
+      ul.side-nav li.work a, ul.side-nav li.active a{
         color: white;
         margin-left: 170px; /* Moves only the links */
         text-decoration: none;
@@ -116,7 +116,7 @@
       }
   
       /* Styling for links when hovered */
-      ul.side-nav li.work a:hover {
+      ul.side-nav li.active a:hover, ul.side-nav li.work a:hover {
         color: #bbb; /* Change color to white on hover */
       }
   
@@ -128,7 +128,7 @@
         background-color: #5E0000;
         height: 100vh; /* Ensure the main content takes up the full height of the viewport */
       }
-  
+
       /* Additional styling for text and layout */
       .page-title {
         font-size: 3.5rem;
@@ -144,25 +144,6 @@
         margin-left: auto;
         margin-right: auto;
         text-align: center;
-      }
-  
-      .social {
-        margin-top: 20px;
-        text-align: center;
-      }
-  
-      .social .icon-btn {
-        margin: 10px;
-        background-color: #816580;
-        color: white;
-        border: none;
-        padding: 10px;
-        border-radius: 50%;
-        cursor: pointer;
-      }
-  
-      .social .icon-btn:hover {
-        background-color: #9C869B;
       }
   
       /* Main grid container styles */
