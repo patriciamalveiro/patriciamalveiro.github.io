@@ -15,9 +15,7 @@ html, body {
   }
 
   /* Set the overall background color of the page */
-  body {
-    
-    color: white; /* Set text color to white to make it stand out */
+  body {    
     font-family: 'Futura PT', sans-serif;
   }
 
