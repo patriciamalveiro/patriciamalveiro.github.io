@@ -57,28 +57,29 @@
     <!-- Main Content -->
     <main id="main">
         <h3 class="page-title">Contact me</h3>
-        <form class="contact-form">
+
+        <form action="https://formspree.io/f/xyzywjzb" method="POST">
           <div class="grid-container">
               <div class="grid-item">
                 <p style="color:white; text-align: left;">Name</p>
                 <a>
-                  <input type="text" id="name" name="name" required>
+                  <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
                 </a>
               </div>
               <div class="grid-item">
                 <p style="color:white; text-align: left;">Email</p>
-                <input type="email" id="email" name="email" required>
+                <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
               </div>
               <div class="grid-item">
                 <p style="color:white; text-align: left;">Subject</p>
-                <input type="text" id="subject" name="subject" required>
+                <input type="text" name="_subject" id="email-subject" placeholder="Contact Form Submission">
               </div>
               <div class="grid-item">
                 <p style="color:white; text-align: left;">Message</p>
-                <input type="text" id="message" name="message" required>
+                <textarea rows="5" name="message" id="message" placeholder="Type message here..." required="" style="color: white;"></textarea>
               </div>
-              <div class="grid-item">
-                <button type="submit" class="send-btn">Submit</button>
+              <div class="grid-item" style="text-align: left;">
+                <input type="submit" value="Send" style="width: 5%;">
               </div>
             </div>
         </form>
